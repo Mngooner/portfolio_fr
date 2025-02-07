@@ -6,6 +6,8 @@ import DisplayCurrent from "./DisplayCurrent";
 import Form from "./Form";
 import TextContent from "./TextContent";
 import { ActionProps, StateProps } from "./interface";
+import { images } from "../images/images";
+import { weatherImages } from "../images/weatherImages";
 
 const initialState = {
   cityName: "",
@@ -93,17 +95,17 @@ const Weather = () => {
 
   const GetWeatherData = async (lat: number, lng: number) => {
     try {
-      const imgRes = await fetch("http://localhost:3000/api/weatherImages");
-      const imgData = await imgRes.json();
-
+      
       const res = await fetch(
         `https://api.weatherapi.com/v1/forecast.json?key=1b0d67b4f62b4955b32163541241812&q=${lat},${lng}&days=5`
       );
       const data = await res.json();
 
-      const result = imgData.filter(
+      const result = weatherImages.filter(
         (image) => image.code === data.current.condition.code
       );
+
+      console.log(result)
       dispatch({ type: "weatherBgImage", payload: result[0].url });
       dispatch({ type: "getWeatherData", payload: data });
     } catch (err) {

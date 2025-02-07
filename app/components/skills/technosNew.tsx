@@ -1,27 +1,25 @@
 import React, { use } from "react";
 import Image from "next/image";
-import { fetchData, ImageProps } from "./technos";
+import { ImageProps } from "./technos";
+import { images } from "../images/images";
 
-const dataPromise = fetchData()
+// const dataPromise = fetchData()
 
 const TechnosNew = () => {
-
-  const data = use(dataPromise)
+  // const data = use(dataPromise)
 
   const hoverIn = (e: React.SyntheticEvent<HTMLImageElement>) => {
     e.currentTarget.style.opacity = "1";
   };
 
   const hoverOut = (e: React.SyntheticEvent<HTMLImageElement>) => {
-    
     e.currentTarget.style.opacity = ".4";
   };
 
-
-
-  const imageList = data.map((image: ImageProps) => 
+  const imageList = images.map(
+    (image: ImageProps) =>
       !image.learnt && (
-        <div key={crypto.randomUUID()} className="p-3 my-5" >
+        <div key={crypto.randomUUID()} className="p-3 my-5">
           <Image
             src={image.url}
             alt=""
@@ -33,7 +31,7 @@ const TechnosNew = () => {
           />
         </div>
       )
-    );
+  );
 
   return (
     <div className="flex flex-wrap items-center justify-center">
