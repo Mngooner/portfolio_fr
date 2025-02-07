@@ -7,7 +7,7 @@ export interface ImageProps {
 };
 
 export const fetchData = async () => {
-  const res = await fetch("http://localhost:3000/api/images");
+  const res = await fetch("http://unen-portfolio.cjkkg4wmma2c.eu-west-3.rds.amazonaws.com/api/images");
   return res.json();
 };
 const dataPromise = fetchData();
