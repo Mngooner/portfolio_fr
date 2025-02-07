@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Technos from "./technos";
 import TechnosNew from "./technosNew";
