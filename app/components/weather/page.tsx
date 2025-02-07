@@ -6,7 +6,6 @@ import DisplayCurrent from "./DisplayCurrent";
 import Form from "./Form";
 import TextContent from "./TextContent";
 import { ActionProps, StateProps } from "./interface";
-import { images } from "../images/images";
 import { weatherImages } from "../images/weatherImages";
 
 const initialState = {

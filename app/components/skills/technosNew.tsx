@@ -1,4 +1,4 @@
-import React, { use } from "react";
+import React from "react";
 import Image from "next/image";
 import { ImageProps } from "./technos";
 import { images } from "../images/images";
