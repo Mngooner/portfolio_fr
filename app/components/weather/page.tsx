@@ -104,7 +104,6 @@ const Weather = () => {
         (image) => image.code === data.current.condition.code
       );
 
-      console.log(result)
       dispatch({ type: "weatherBgImage", payload: result[0].url });
       dispatch({ type: "getWeatherData", payload: data });
     } catch (err) {
@@ -125,7 +124,7 @@ const Weather = () => {
       className={"flex bg-[#a4cbb4] flex-col items-center min-h-[80vh] py-10"}
     >
       <TextContent />
-      <motion.div ref={element} style={{ opacity: scrollYProgress }}>
+      <motion.div ref={element} style={{ opacity: scrollYProgress }} className="w-[80%] mx-auto">
         <Form getLocData={GetLocData} cityName={cityName} dispatch={dispatch} />
       </motion.div>
       <div>

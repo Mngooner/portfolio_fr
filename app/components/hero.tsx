@@ -9,7 +9,7 @@ const Hero = () => {
   const isEnglish = useLanguage();
 
   return (
-    <div className="flex flex-col bg-[#ece3ca] min-h-screen h-auto z-0 ">
+    <div className="flex flex-col bg-[#ece3ca] min-h-screen h-auto z-0 p-4">
       <Navigation />
       <div className="flex flex-col items-center justify-center min-h-screen gap-10">
         {isEnglish ? (

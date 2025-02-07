@@ -33,7 +33,7 @@ const Dropdown = ({
   };
 
   return (
-    <div>
+    <div className="w-[80%] mx-auto">
       {isDropDownVisible && (
         <select
           value={"Please select your location"}

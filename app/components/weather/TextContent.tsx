@@ -61,7 +61,7 @@ const TextContent = () => {
         </dialog>
       </div>
 
-      <div className="flex flex-col items-center gap-4 mt-10">
+      <div className="flex flex-col items-center gap-4 mt-10 w-[80%] mx-auto">
         <motion.p ref={element} style={{ opacity: scrollYProgress }}>
           {isEnglish
             ? "By the way, what is the weather where you are?"
