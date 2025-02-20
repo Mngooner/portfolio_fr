@@ -124,7 +124,7 @@ const Weather = () => {
       className={"flex bg-[#a4cbb4] flex-col items-center min-h-[80vh] py-10"}
     >
       <TextContent />
-      <motion.div ref={element} style={{ opacity: scrollYProgress }} className="w-[80%] mx-auto">
+      <motion.div ref={element} style={{ opacity: scrollYProgress }} className="w-[80%] mx-auto flex justify-center">
         <Form getLocData={GetLocData} cityName={cityName} dispatch={dispatch} />
       </motion.div>
       <div>

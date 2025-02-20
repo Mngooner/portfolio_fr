@@ -6,7 +6,7 @@ const Form = ({ getLocData, cityName, dispatch }: FormProps) => {
     const isEnglish = useLanguage()
     return (
     
-    <form onSubmit={getLocData} className='flex self-center gap-3 w-full max-w-xs'>
+    <form onSubmit={getLocData} className='flex gap-3 w-full max-w-xs'>
         <input
             type="text"
             name="cityName"
