@@ -2,8 +2,8 @@
 import React, { useState, useContext, ReactNode } from "react";
 
 const LanguageContext = React.createContext(false);
-const FrenchContext = React.createContext();
-const EnglishContext = React.createContext();
+const FrenchContext = React.createContext(false);
+const EnglishContext = React.createContext(true);
 
 export function useLanguage() {
   return useContext(LanguageContext);

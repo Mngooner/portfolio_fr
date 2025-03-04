@@ -22,7 +22,7 @@ const Contact = () => {
   }
 
   return (
-    <div className="flex flex-col bg-[#ece3ca] min-h-[80vh] h-auto py-10 justify-center gap-5">
+    <div className="flex flex-col bg-[#a4cbb4] min-h-[80vh] h-auto py-10 justify-center gap-5">
       <div className="w-[80%] mx-auto">
         <p className="mb-5">
           {isEnglish
